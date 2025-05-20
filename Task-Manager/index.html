@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Task Manager</h1>
+        
+        <div class="input-group">
+            <input type="text" id="taskInput" placeholder="Aggiungi una nuova attività...">
+            <button onclick="addTask()">Aggiungi</button>
+        </div>
+        
+        <div class="filters">
+            <div class="filter-group">
+                <label for="statusFilter">Filtra per stato:</label>
+                <select id="statusFilter" onchange="filterTasks()">
+                    <option value="all">Tutti</option>
+                    <option value="todo">Da fare</option>
+                    <option value="in-progress">In corso</option>
+                    <option value="completed">Completate</option>
+                </select>
+            </div>
+            
+            <div class="search-group">
+                <label for="searchInput">Cerca:</label>
+                <input type="text" id="searchInput" placeholder="Nome attività..." oninput="filterTasks()">
+            </div>
+        </div>
+        
+        <ul id="taskList" class="task-list">
+            <!-- Tasks will be added here -->
+            <li class="empty-message">Nessuna attività presente. Aggiungi qualcosa!</li>
+        </ul>
+    </div>
+    
+    <!-- Edit Modal -->
+    <div id="editModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Modifica Attività</h2>
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <input type="text" id="editTaskName" placeholder="Nome attività">
+                <select id="editTaskStatus">
+                    <option value="todo">Da fare</option>
+                    <option value="in-progress">In corso</option>
+                    <option value="completed">Completata</option>
+                </select>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-edit" onclick="saveTaskEdit()">Salva</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
