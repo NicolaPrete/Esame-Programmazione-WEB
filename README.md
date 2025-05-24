@@ -12,7 +12,7 @@ Questo repository contiene i tre progetti sviluppati come parte del modulo forma
 - [Tecnologie Utilizzate](#tecnologie-utilizzate)
 - [Installazione e Utilizzo](#installazione-e-utilizzo)
 - [Documentazione Tecnica](#documentazione-tecnica)
-- [Struttura del Repository](#struttura-del-repository)
+- [Struttura del Repository](#-struttura-del-repository)
 
 ## Panoramica
 
