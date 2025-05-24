@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meteo App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Meteo App</h1>
+            <p>Consulta il meteo in tempo reale</p>
+        </header>
+        
+        <div class="error-message" id="errorMessage"></div>
+        
+        <div class="search-container">
+            <h2>Cerca per coordinate</h2>
+            <div class="coordinates-input">
+                <div class="input-group">
+                    <label for="latitude">Latitudine</label>
+                    <input type="number" id="latitude" step="0.0001" placeholder="Es. 46.0679" value="46.0679">
+                </div>
+                <div class="input-group">
+                    <label for="longitude">Longitudine</label>
+                    <input type="number" id="longitude" step="0.0001" placeholder="Es. 11.1211" value="11.1211">
+                </div>
+            </div>
+            <div class="button-group">
+                <button id="searchBtn">Cerca</button>
+                <button class="locate" id="locateBtn">Usa posizione attuale</button>
+            </div>
+        </div>
+        
+        <div class="loading" id="loading">Caricamento in corso</div>
+        
+        <div class="weather-data" id="weatherData">
+            <div class="weather-header">
+                <div class="location-info">
+                    <h2 id="locationName">Posizione</h2>
+                    <div class="coordinates" id="coordinatesDisplay">Lat: 0, Long: 0</div>
+                </div>
+                <div class="weather-icon" id="weatherIcon">
+                    <!-- Weather icon will be inserted here -->
+                </div>
+            </div>
+            <div class="weather-details">
+                <div class="temperature" id="temperature">0°C</div>
+                <div class="weather-description" id="weatherDescription">Descrizione meteo</div>
+                <div class="details-grid">
+                    <div class="detail-item">
+                        <div class="label">Umidità</div>
+                        <div class="value" id="humidity">0%</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="label">Precipitazioni</div>
+                        <div class="value" id="precipitation">0 mm</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="label">Pioggia</div>
+                        <div class="value" id="rain">0 mm</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="label">Copertura nuvolosa</div>
+                        <div class="value" id="cloudCover">0%</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="label">Velocità vento</div>
+                        <div class="value" id="windSpeed">0 km/h</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>Dati forniti da <a href="https://open-meteo.com/" target="_blank">Open-Meteo.com</a></p>
+        </footer>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
