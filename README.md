@@ -121,9 +121,9 @@ Per utilizzare questi progetti localmente, segui questi passi:
    ```
 
 3. Apri il file index.html nella radice del progetto o naviga nelle singole cartelle dei progetti e apri i rispettivi file HTML:
-   - `/task-manager/index.html`
-   - `/cronometro/index.html`
-   - `/meteo-app/index.html`
+   - `/Task-Manager/index.html`
+   - `/Cronometro/index.html`
+   - `/Meteo-app/index.html`
 
 Non sono necessarie dipendenze esterne o configurazioni particolari per l'esecuzione di base dei progetti.
 
